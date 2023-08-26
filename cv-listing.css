@@ -1,0 +1,96 @@
+#control-panel {
+  width: 30%;
+  padding-left: 1%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#search-input {
+  width: 79%;
+  height: 80%;
+  border-radius: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+}
+
+#btn-search {
+  width: 20%;
+  height: 70%;
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+#user-cv-list {
+  width: 100%;
+  height: auto;
+  padding-bottom: 15vh;
+  padding-top: 15vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.user-card {
+  width: 20%;
+  height: 25vh;
+  padding: 1%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+  margin: 0.1%;
+  margin-top: 1%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+}
+.user-card:hover {
+  width: 33%;
+  height: 35vh;
+  margin: 0;
+}
+.user-card-main{
+width: 100%;
+height: 80%;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+
+.profile-image {
+  width: 30%;
+  height: 100%;
+}
+
+.user-details {
+  width: 65%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  background-color: rgba(234, 234, 228, 0.135);
+  font-size: 2rem;
+  color: black;
+  text-align: center;
+  text-align: start;
+  padding: 5%;
+}
+.user-card-footer{
+  width: 50%;
+  height: 20%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.user-details h1,
+h6 {
+  text-align: center;
+}

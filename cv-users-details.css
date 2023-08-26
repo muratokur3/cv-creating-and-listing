@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+}
+
+#user-cv {
+  width: 70%;
+  display: none;
+  flex-direction: row;
+  margin-top: 10vh;
+}
+
+#cv-left {
+  width: 40%;
+  background-color: rgba(238, 236, 236, 0.559);
+  font-size: 2.5rem;
+}
+
+/* #cv-sosyal {
+  display: flex;
+  height: 10vh;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 0;
+} */
+
+/* #cv-sosyal * {
+  font-size: 5rem;
+} */
+
+#cv-right {
+  width: 60%;
+  height: 35%;
+  display: flex;
+  flex-direction: column;
+}
+
+#cv-image-box {
+  width: 50%;
+  height: 20vh;
+  border: 10px solid white;
+  border-radius: 100%;
+  margin: -10vh 0 10vh 25%;
+}
+#cv-left-detail-box {
+  padding-left: 10%;
+}
+
+.cv-detail-box {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5vh;
+}
+
+#user-cv hr {
+  height: 2px;
+  background-color: black;
+  border: none;
+}
+
+.cv-detail-box * {
+  margin-top: 2%;
+  font-size: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.referans{
+  display: flex;
+  flex-direction: column;
+}
+/* cv right */
+
+#cv-right {
+  width: 60%;
+  height: auto;
+  padding: 5% 5%;
+  font-size: 2.5rem;
+}
+
+.year-detail {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding-top: 2vh;
+  margin-bottom: 5%;
+}
+.year {
+  width: 30%;
+  font-size: 1.5rem;
+  color: gray;
+  font-size: 2.5rem;
+}
+.detail {
+  width: 70%;
+  height: 90px;
+    display: flex;
+  flex-direction: column;
+}

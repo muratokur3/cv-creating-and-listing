@@ -1,0 +1,176 @@
+*,
+body {
+  font-family: monospace;
+  box-sizing: border-box;
+}
+#btn-home {
+  border: none;
+  font-size: 3rem;
+}
+#btn-home:hover {
+  background-color: white;
+}
+#user-create {
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  display: none;
+}
+
+.inputText {
+  width: 25%;
+  height: 7%;
+  font-size: 1.5rem;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  border: none;
+  padding: 2%;
+  font-size: 4rem;
+}
+
+#login-btn-select-image {
+  width: 10%;
+  height: 20%;
+  padding: 1%;
+  border-radius: 100%;
+  border: none;
+  background-color: gainsboro;
+  background: none;
+}
+
+#login-btn-select-image:hover {
+  opacity: 0.8;
+}
+
+#login-images-box {
+  width: 35%;
+  height: 70%;
+  background-color: orange;
+  position: absolute;
+  position: fixed;
+  top: 8vh;
+  right: 2%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 2%;
+  border-radius: 20px;
+  visibility: hidden;
+  z-index: 3;
+}
+#login-images-box img {
+  width: 24%;
+  height: 24%;
+  margin: 1% 0 0 1%;
+  cursor: pointer;
+}
+#login-images-box img:hover {
+  opacity: 0.5;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 20%;
+  height: 80%;
+  border: none;
+  background: none;
+  padding: 5px;
+  font-weight: bold;
+  font-size: 3rem;
+  color: black;
+  font-weight: 100;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+#sign-login {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 20%;
+  height: 80%;
+  border-radius: 30px;
+  border: none;
+  background: none;
+  padding: 5px;
+  font-weight: bold;
+  color: black;
+  font-weight: 100;
+}
+
+#sign-login a {
+  text-decoration: none;
+  color: black;
+  transition: 1s;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+}
+
+#sign-box {
+  position: absolute;
+  width: 50vh;
+  height: 35vh;
+  right: 1vh;
+  top: 10vh;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(37, 36, 36, 0.818);
+  border-radius: 5%;
+  border: none;
+  transition: 1s;
+  z-index: 3;
+  color: wheat;
+  font-size: xx-large;
+}
+
+#sign-box input {
+  width: 50%;
+  height: 17%;
+}
+#sign-box button {
+  width: 50%;
+  height: 17%;
+}
+
+#login-box {
+  border: none;
+  position: absolute;
+  width: 100vw;
+  height: 90vh;
+  background-color: rgba(37, 36, 36, 0.911);
+  top: 10vh;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: wheat;
+  font-size: xx-large;
+  transition: 1s;
+  z-index: 3;
+}
+.btn-sign-login {
+  width: 25%;
+  height: 7%;
+  background-color: rgb(40, 115, 40);
+  color: white;
+  border-radius: 40px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
