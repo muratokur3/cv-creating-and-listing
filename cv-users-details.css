@@ -17,6 +17,12 @@
   font-size: 2.5rem;
 }
 
+.detail-head{
+  width: 100%;
+  background-color: rgba(238, 236, 236, 0.559);
+  padding: 3%;
+}
+ 
 /* #cv-sosyal {
   display: flex;
   height: 10vh;
@@ -35,6 +41,7 @@
   height: 35%;
   display: flex;
   flex-direction: column;
+  background-color: rgba(238, 236, 236, 0.559);
 }
 
 #cv-image-box {
@@ -53,8 +60,16 @@
   height: auto;
   display: flex;
   flex-direction: column;
-  margin-bottom: 5vh;
+  position: relative;
+  padding: 5%;
+  background-color: rgba(227, 222, 222, 0.557);
 }
+.cv-detail-box:hover{
+opacity: .5;
+border: 1px dotted gray;
+background: none;
+}
+
 
 #user-cv hr {
   height: 2px;
@@ -72,6 +87,7 @@
 .referans{
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 /* cv right */
 
@@ -97,7 +113,7 @@
 }
 .detail {
   width: 70%;
-  height: 90px;
+  height: auto;
     display: flex;
   flex-direction: column;
 }

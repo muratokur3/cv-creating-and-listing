@@ -1,0 +1,48 @@
+.icon-edit{
+    position: absolute;
+    top: 1px;
+    right: 1px;
+}
+#edit{
+    border: none;
+    position: absolute;
+    width: 100vw;
+    height: 90vh;
+    background-color: rgba(37, 36, 36, 0.911);
+    top: 10vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: wheat;
+    font-size: xx-large;
+    transition: 1s;
+    z-index: 3;
+}
+
+
+
+
+
+
+
+
+
+.btn-ubdate {
+    font-size: 2.5rem;
+    color: orange;
+    background-color: rgba(255, 255, 255, 0.169);
+    position: absolute;
+    right: 1px;
+    bottom: 1px;
+  }
+  
+  .btn-delete {
+    font-size: 2.5rem;
+    color: brown;
+    position: absolute; 
+     background-color: rgba(255, 255, 255, 0.169);
+    right: 1px;
+    bottom: 60px;
+  }
+  

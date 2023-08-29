@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="profile.css">
   <link rel="stylesheet" href="cv-listing.css">
   <link rel="stylesheet" href="cv-users-details.css">
+  <link rel="stylesheet" href="user-detail-crud.css">
   <meta charset="UTF-8" />
   <script src="https://kit.fontawesome.com/117a0da7a9.js" crossorigin="anonymous"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,13 +18,13 @@
 
   <header>
     <button class="button" id="btn-home" onclick="usersListing()">Home</button>
-    
+
     <button class="button" id="sign-login"><a id="log-in" onclick="logIn()">LogIn </a><a id="sign-in"
         onclick="signIn()"> SignIn</a></button>
-    <button id="btn-profile" >Profile</i></button>
+    <button id="btn-profile">Profile</i></button>
 
     <!-- giriş yap -->
-    <div id="sign-box" class="sign-login-box">
+    <div id="sign-box">
       <h1>Signin</h1>
       <br>
       <input type="text" class="inputText" id="sign-user-name" placeholder="User Name" />
@@ -34,7 +35,7 @@
     </div>
 
     <!-- kayıt ol -->
-    <div id="login-box" class="sign-login-box">
+    <div id="login-box" >
 
       <h1>Login</h1>
       <br>
@@ -84,9 +85,11 @@
         <img id="cv-image-box" src="images/user.png">
 
         <div id="cv-left-detail-box">
+          <div class="detail-head">
+            <h3> ILETİSİM</h3>
+            <hr>
+          </div>
 
-          <h3> ILETİSİM</h3>
-          <hr>
           <div class="cv-detail-box" id="cv-iletisim">
 
           </div>
@@ -94,23 +97,31 @@
           <hr>
           <div class="cv-detail-box" id="cv-sosyal">
           </div> -->
+          <div class="detail-head">
+            <h3> DILLER</h3>
+            <hr>
+          </div>
 
-          <h3> DILLER</h3>
-          <hr>
           <div class="cv-detail-box" id="cv-diller">
 
 
 
           </div>
-          <h3> BECERİLER</h3>
-          <hr>
+          <div class="detail-head">
+            <h3> BECERİLER</h3>
+            <hr>
+          </div>
+
           <div class="cv-detail-box" id="cv-beceriler">
 
 
 
           </div>
-          <h3> REFERANSLAR</h3>
-          <hr>
+          <div class="detail-head">
+            <h3> REFERANSLAR</h3>
+            <hr>
+          </div>
+
           <div class="cv-detail-box" id="cv-referanslar">
 
 
@@ -123,20 +134,27 @@
         <h1 id="cv-user-name">isim</h1>
         <h3 id="user-head">head</h3>
         <br>
-        <h3>İŞ DENEYİMİ</h3>
-        <hr>
+        <div class="detail-head">
+          <h3>İŞ DENEYİMİ</h3>
+          <hr>
+        </div>
+
 
         <div class="cv-detail-box" id="cv-is-deneyimi">
         </div>
+        <div class="detail-head">
+          <h3> EĞİTİM</h3>
+          <hr>
+        </div>
 
-        <h3> EĞİTİM</h3>
-        <hr>
 
         <div class="cv-detail-box" id="cv-egitim">
         </div>
+        <div class="detail-head">
+          <h3> SERTİFİKALAR</h3>
+          <hr>
+        </div>
 
-        <h3> SERTİFİKALAR</h3>
-        <hr>
 
         <div class="cv-detail-box" id="cv-sertifikalar">
 
@@ -144,7 +162,6 @@
 
       </div>
     </div>
-
   </main>
   <script src="script.js"></script>
 </body>

@@ -320,6 +320,7 @@ let userData = [
     userId: 3,
   },
 ];
+
 let currentUser;
 let currentUserData;
 let userRegister = false;
@@ -414,6 +415,7 @@ function getRandomColor() {
 }
 
 function usersListing() {
+  showUserCv(users[0], userData[0]);
   userCv.style.display = "none";
   userCvList.style.display = "flex";
   signBox.style.display = "none";
@@ -506,96 +508,119 @@ function showUserCv(userCurrent, userCurrentData) {
   cvIsDeneyimi.innerHTML = "";
   cvEgitim.innerHTML = "";
   cvSertifikalar.innerHTML = "";
-  // cvSosyal.innerHTML = "";
+// cvSosyal.innerHTML = "";
+   function writeCvDetail () {
+    // iletişim
+    cvImageBox.src = userCurrent.proflieImagePath;
+    cvUserName.innerHTML = `${userCurrent.firstName} ${userCurrent.lastName}`;
+    userHead.innerHTML = userCurrentData.experience[0].head;
 
-  cvImageBox.src = userCurrent.proflieImagePath;
-  cvUserName.innerHTML = `${userCurrent.firstName} ${userCurrent.lastName}`;
-  userHead.innerHTML = userCurrentData.experience[0].head;
-
-  userCurrentData.contact.phone.forEach((item) => {
-    cvIletisim.innerHTML += `<p>${item }</p>`;
-  });
-
-
-  
-  userCurrentData.contact.mail.forEach((item) => {
-    cvIletisim.innerHTML += `<p>${item }</p>`;
-  });
-
-  userCurrentData.contact.web.forEach((item) => {
-    cvIletisim.innerHTML += `<p>${item}</p>`;
-  });
-
-  // cvSosyal.innerHTML += `<a href="${userCurrentData.socialAccount.gitHub}"><i class="fa-brands fa-github fa-2xl"></i></a>`;
-  // cvSosyal.innerHTML += `<a href="${userCurrentData.socialAccount.linkedin}"><i class="fa-brands fa-linkedin fa-2xl" style="color: #002e7a;"></i></a>`;
-  // cvSosyal.innerHTML += `<a href="${userCurrentData.socialAccount.twitter}"><i class="fa-brands fa-twitter fa-2xl" style="color: #0061ff;"></i></a>`;
-
-  userCurrentData.languages.forEach((item) => {
-    cvDiller.innerHTML += `<p>${item}</p>`;
-  });
-
-  userCurrentData.skills.forEach((item) => {
-    cvBeceriler.innerHTML += `<p>${item}</p>`;
-  });
-
-  userCurrentData.references.forEach((ref) => {
-    let referans = document.createElement("div");
-    referans.classList = "referans";
-    referans.innerHTML = `<h3>${ref.fullName}</h3> <h5>${ref.head}</h5>`;
-    cvReferanslar.appendChild(referans);
-
-    ref.contact.forEach((item) => {
-      referans.innerHTML += `<p>${item}</p>`;
+    userCurrentData.contact.phone.forEach((item) => {
+      cvIletisim.innerHTML += `<p>${item}</p>`;
     });
-  });
 
-  userCurrentData.experience.forEach((exper) => {
-    let yearDetail = document.createElement("div");
-    yearDetail.classList = "year-detail";
-    cvIsDeneyimi.appendChild(yearDetail);
+    userCurrentData.contact.mail.forEach((item) => {
+      cvIletisim.innerHTML += `<a>${item}</a>`;
+    });
 
-    let year = document.createElement("div");
-    year.classList = "year";
-    year.innerHTML = exper.year;
-    yearDetail.appendChild(year);
+    userCurrentData.contact.web.forEach((item) => {
+      cvIletisim.innerHTML += `<a>${item}</a>`;
+    });
 
-    let detail = document.createElement("div");
-    detail.classList = "detail";
-    detail.innerHTML = `<h3>${exper.head}</h3> <br> <p>${exper.detail}</p>`;
-    yearDetail.appendChild(detail);
-  });
+    // sosyal media
+    // cvSosyal.innerHTML += `<a href="${userCurrentData.socialAccount.gitHub}"><i class="fa-brands fa-github fa-2xl"></i></a>`;
+    // cvSosyal.innerHTML += `<a href="${userCurrentData.socialAccount.linkedin}"><i class="fa-brands fa-linkedin fa-2xl" style="color: #002e7a;"></i></a>`;
+    // cvSosyal.innerHTML += `<a href="${userCurrentData.socialAccount.twitter}"><i class="fa-brands fa-twitter fa-2xl" style="color: #0061ff;"></i></a>`;
 
-  userCurrentData.schoolEducation.forEach((school) => {
-    let yearDetail = document.createElement("div");
-    yearDetail.classList = "year-detail";
-    cvEgitim.appendChild(yearDetail);
+    // diller
+    userCurrentData.languages.forEach((item) => {
+      cvDiller.innerHTML += `<p>${item}</p>`;
+    });
 
-    let year = document.createElement("div");
-    year.classList = "year";
-    year.innerHTML = school.year;
-    yearDetail.appendChild(year);
+    // beceriler
+    userCurrentData.skills.forEach((item) => {
+      cvBeceriler.innerHTML += `<p>${item}</p>`;
+    });
 
-    let detail = document.createElement("div");
-    detail.classList = "detail";
-    detail.innerHTML = `<h3>${school.head}</h3> <br> <p>${school.detail}</p>`;
-    yearDetail.appendChild(detail);
-  });
+    // referansalar
+    userCurrentData.references.forEach((ref) => {
+      let referans = document.createElement("div");
+      referans.classList = "referans";
+      referans.innerHTML = `<h3>${ref.fullName}</h3> <h5>${ref.head}</h5>`;
+      cvReferanslar.appendChild(referans);
 
-  userCurrentData.certificates.forEach((school) => {
-    let yearDetail = document.createElement("div");
-    yearDetail.classList = "year-detail";
-    cvSertifikalar.appendChild(yearDetail);
+      ref.contact.forEach((item) => {
+        referans.innerHTML += `<p>${item}</p>`;
+      });
+    });
 
-    let year = document.createElement("div");
-    year.classList = "year";
-    year.innerHTML = school.year;
-    yearDetail.appendChild(year);
+    // deneyimler
+    userCurrentData.experience.forEach((exper) => {
+      let yearDetail = document.createElement("div");
+      yearDetail.classList = "year-detail";
+      cvIsDeneyimi.appendChild(yearDetail);
 
-    let detail = document.createElement("div");
-    detail.classList = "detail";
-    detail.innerHTML = `<h3>${school.head}</h3> <br> <p>${school.detail}</p>`;
-    yearDetail.appendChild(detail);
-  });
+      let year = document.createElement("div");
+      year.classList = "year";
+      year.innerHTML = exper.year;
+      yearDetail.appendChild(year);
+
+      let detail = document.createElement("div");
+      detail.classList = "detail";
+      detail.innerHTML = `<h3>${exper.head}</h3> <br> <p>${exper.detail}</p>`;
+      yearDetail.appendChild(detail);
+    });
+
+    // eğitimler
+    userCurrentData.schoolEducation.forEach((school) => {
+      let yearDetail = document.createElement("div");
+      yearDetail.classList = "year-detail";
+      cvEgitim.appendChild(yearDetail);
+
+      let year = document.createElement("div");
+      year.classList = "year";
+      year.innerHTML = school.year;
+      yearDetail.appendChild(year);
+
+      let detail = document.createElement("div");
+      detail.classList = "detail";
+      detail.innerHTML = `<h3>${school.head}</h3> <br> <p>${school.detail}</p>`;
+      yearDetail.appendChild(detail);
+    });
+
+    // seertifikalar
+    userCurrentData.certificates.forEach((school) => {
+      let yearDetail = document.createElement("div");
+      yearDetail.classList = "year-detail";
+      cvSertifikalar.appendChild(yearDetail);
+
+      let year = document.createElement("div");
+      year.classList = "year";
+      year.innerHTML = school.year;
+      yearDetail.appendChild(year);
+
+      let detail = document.createElement("div");
+      detail.classList = "detail";
+      detail.innerHTML = `<h3>${school.head}</h3> <br> <p>${school.detail}</p>`;
+      yearDetail.appendChild(detail);
+    });
+  };
+  
+  // if (userRegister) {
+  //   writeCvDetail()
+
+  //   cvIletisim.innerHTML += `<button class="icon-edit"><i class="fa-solid fa-pen-to-square fa-lg" style="color: gray;"></i></button>`;
+  //   cvSertifikalar.innerHTML += `<button class="icon-edit"><i class="fa-solid fa-pen-to-square fa-lg" style="color: gray;"></i></button>`;
+  //   cvIsDeneyimi.innerHTML += `<button class="icon-edit"><i class="fa-solid fa-pen-to-square fa-lg" style="color: gray;"></i></button>`;
+  //   cvReferanslar.innerHTML += `<button class="icon-edit"><i class="fa-solid fa-pen-to-square fa-lg" style="color: gray;"></i></button>`;
+  //   cvBeceriler.innerHTML += `<button class="icon-edit"><i class="fa-solid fa-pen-to-square fa-lg" style="color: gray;"></i></button>`;
+  //   cvDiller.innerHTML += `<button class="icon-edit"><i class="fa-solid fa-pen-to-square fa-lg" style="color: gray;"></i></button>`;
+  //   cvEgitim.innerHTML += `<button class="icon-edit"><i class="fa-solid fa-pen-to-square fa-lg" style="color: gray;"></i></button>`;
+  // }
+  
+    writeCvDetail()
+  
+ 
 }
 
 const signIn = () => {
