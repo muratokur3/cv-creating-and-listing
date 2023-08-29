@@ -350,8 +350,6 @@ const btnProfile = document.getElementById("btn-profile");
 const btnSignIn = document.getElementById("sign-login");
 const signBox = document.getElementById("sign-box");
 
-const asd = document.getElementById("asd");
-
 const loginImageBox = document.getElementById("login-images-box");
 const lognBox = document.getElementById("login-box");
 const loginUserfirsName = document.getElementById("login-firstname");
